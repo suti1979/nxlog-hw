@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# Transfer List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application that demonstrates a transfer list component. Users can move items between two columns using various transfer options.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Two columns displaying lists of items
+- Checkbox selection for individual items
+- Transfer selected items between columns
+- Transfer all items between columns
+- Responsive design
 
-## Expanding the ESLint configuration
+## Components
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### App
 
-- Configure the top-level `parserOptions` property like this:
+The main component that initializes the state and renders the TransferList component.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### TransferList
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+The core component that manages the transfer functionality and renders the columns and transfer buttons.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Column
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+A reusable component that displays a list of items with checkboxes for selection.
+
+## How to Use
+
+1. Clone the repository
+2. Install dependencies with `npm install` or `yarn install`
+3. Run the development server with `npm run dev` or `yarn dev`
+4. Open your browser and navigate to `http://localhost:5173` (or the port specified in your console)
+
+## Technologies Used
+
+- React
+- TypeScript
+- Vite (for build and development)
+- Tailwind CSS (for styling)
+
+## Future Improvements
+
+- Add drag and drop functionality
+- Implement search and filter options
+- Allow for custom item addition
+- Enhance accessibility features
+
+Feel free to contribute to this project by submitting pull requests or reporting issues!
